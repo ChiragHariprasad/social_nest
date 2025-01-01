@@ -1,3 +1,23 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.rvce.communitychat"  // Make sure this matches the package name
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    namespace 'com.rvce.communitychat'  // Ensure this matches your package name
+}
+
 allprojects {
     repositories {
         google()
@@ -11,8 +31,4 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
-}
-
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
 }
