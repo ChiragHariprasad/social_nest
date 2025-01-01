@@ -20,7 +20,7 @@ android {
 
     sourceSets {
         main {
-            manifest.srcFile 'src/main/AndroidManifest.xml'  // Correct path to your manifest file
+            manifest.srcFile "${project.rootDir}/android/app/src/main/AndroidManifest.xml"
         }
     }
 
